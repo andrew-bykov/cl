@@ -1,6 +1,6 @@
 {
-  "name": "NEWS",
-  "short_name": "NEWS",
+  "name": "CashLogic",
+  "short_name": "CashLogic",
   "icons": [{
       "src": "images/news-icon-128.png",
       "sizes": "128x128",
