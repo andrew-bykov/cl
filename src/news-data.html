@@ -95,7 +95,7 @@
                             author: h.author,
                             summary: this._trimRight(h.summary, 100),
                             readTime: Math.max(2, Math.round(h.contentLength / 3e3)) +
-                                ' min read'
+                                ' мин. для чтения'
                         });
                         return f
                     },
@@ -112,12 +112,12 @@
                     _timeAgo: function (d) {
                         if (!d) return '';
                         var f = (Date.now() - d) / 1e3 / 60;
-                        if (2 > f) return '1 min ago';
-                        if (60 > f) return Math.floor(f) + ' mins ago';
-                        if (120 > f) return '1 hour ago';
+                        if (2 > f) return ' 1 мин. назад';
+                        if (60 > f) return Math.floor(f) + ' мин. назад';
+                        if (120 > f) return ' 1 ч. назад';
                         var g = f / 60;
-                        return 24 > g ? Math.floor(g) + ' hours ago' : 48 > g ? '1 day ago' : Math
-                            .floor(g / 24) + ' days ago'
+                        return 24 > g ? Math.floor(g) + ' ч. назад' : 48 > g ? ' 1 д. назад' : Math
+                            .floor(g / 24) + ' д. назад'
                     },
                     _trimRight: function (d, f) {
                         var g = d.indexOf(' ', f);
